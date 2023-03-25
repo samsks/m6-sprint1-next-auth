@@ -1,3 +1,39 @@
 {
-  "extends": "next/core-web-vitals"
+  // "env": {
+  //     "browser": true,
+  //     "es2021": true,
+  //     "node": true
+  // },
+  "extends": [
+    // "plugin:react/recommended",
+    // "standard-with-typescript",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "overrides": [],
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    // "tsconfigRootDir": "./",
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": ["tsconfig.json"]
+  },
+  "plugins": [
+    // "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error"
+    // "@typescript-eslint/no-misused-promises": [
+    //   "error",
+    //   {
+    //     "checksVoidReturn": false
+    //   }
+    // ]
+  }
 }
